@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head><title></title>
+     <style>
+      body, input {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick='sumArr()'>Calculate Array</button>
+    <p id='pArray'></p>
+    <input id='sumx' type='text'>
+    <p></p>
+    <input id='avg' >
+
+    <script lang='javascript'>
+      var something = document.getElementById('pArray');
+
+      function sumArr() {
+        var arr = [];
+        for(idx=0; idx<10; idx++) {
+          arr.push(Math.floor(Math.random() * 10));
+        }
+        var arrList = arr.join();
+        something.textContent = arrList;
+        var total = 0;
+        for(idx=0; idx<arr.length; idx++){
+          total += arr[idx];
+        }
+              // var sum = document.getElementById('sumx');
+        var sumx = document.getElementById('sumx');
+        sumx.value = total;
+        var sumOfArr = total;
+        var avgOfArr = total / arr.length;
+        outputAvg = document.getElementById('avg');
+        outputAvg.value = avgOfArr;
+      }
+    </script>
+
+  </body>
+</html>

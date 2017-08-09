@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <title></title>
+  <style>
+  body {
+    text-align: center;
+  }
+  input {
+    text-align: center;
+    }
+  </style>
+    <script lang='javascript' type='text/javascript'>
+      function fact() {
+          var nbrCtrl = document.getElementById('nbr');
+          var ansCtrl = document.getElementById('ans');
+          var nbr = Number(nbrCtrl.value);
+
+          var fac = 0;
+          for (var idx = 0; idx <= nbr; idx++) {
+          fac += idx;
+          }
+          ansCtrl.value = fac;
+      }
+    </script>
+</head>
+    <body>
+        <label>Enter Number:</label>
+        <input id='nbr'/>
+        <button onclick='fact()'>Calculate Sum</button>
+        <input id='ans'/>
+
+    </body>
+
+</html>

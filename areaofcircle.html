@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <script lang='javascript'>
+    function areaOfCircle(){
+      var nbrCtrl = document.getElementById('nbr');
+      var ansCtrl = document.getElementById('ans');
+      var nbr = Number(nbrCtrl.value);
+
+      if(nbr > 0) {
+        area = 3.1415927 * (nbr*nbr);
+      }
+      // var area =  v v vv v1;
+      // for(idx=0; idx<=nbr;idx++)
+      // {
+      //   area = 3.1415927 * (nbr * nbr);
+      // }
+      ansCtrl.value = area;
+  }
+    </script>
+  </head>
+  <body>
+    <label>Enter Radius Here:</label>
+    <input id='nbr' />
+    <button onclick='areaOfCircle()'>Calculate Area</button>
+    <input id='ans' />
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head><title></title></head>
+  <style> *{text-align: center; font-size: 30pt;} </style>
+  <body>
+    <p id='seq'>something</p>
+  <script lang='javascript'>
+  'use strict';
+        var something = document.getElementById('seq');
+        var arr = [1,2]; //initialize array
+        // function eleID(id) {
+        //   return document.getElementById(id);
+        // }
+        for (var i = arr.length; i < 12; i++) {
+          // Next fibonacci number = previous + one before previous
+          arr[i] = arr[arr.length-2] + arr[i-1];
+          console.log(arr[i]);
+          var arrList = arr.join(); //arr.push(arrList)
+          something.textContent = arrList;
+        }
+        // eleID(seq).textContent = arr;
+
+        //
+//     <body>
+//     <p id='seq'>something</p>
+//   <script lang='javascript'>
+//   'use strict';
+//         var pDisplay = document.getElementById('seq');
+//         var arr = [1,2]; //initialize array
+//         // function eleID(id) {
+//         //   return document.getElementById(id);
+//         // }
+//         for (var i = 0; i < 10; i++) {
+//           // Next fibonacci number = previous + one before previous
+//           var arr1 = arr[arr.length-2] + arr[arr.length-1];
+//           // console.log(arr[i]);
+//           arr.push(arr1); //arr.push(arrList)
+//           pDisplay.textContent = arr;
+//         }
+//         // eleID(seq).textContent = arr;
+//
+  </script>
+  </body>
+</html>

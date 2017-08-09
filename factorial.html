@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <title></title>
+  <style>
+  body {
+    text-align: center;
+  }
+  input {
+    text-align: center;
+    }
+  </style>
+  <body>
+    <script lang='javascript' type='text/javascript'>
+      function fact() {
+                var nbrCtrl = document.getElementById('nbrEnter');
+                var ansCtrl = document.getElementById('answer');
+                var nbrEnter = Number(nbrCtrl.value);
+
+                var fac = 1;
+                for (var idx = 2; idx <= nbrEnter; idx++) {
+                fac = fac * idx;
+
+            // var fac = 1;
+            // for( ; nbrEnter > 0; nbr--) {
+            // fac = fac * idx;
+            // }
+                }
+                ansCtrl.value = fac;
+      }
+    </script>
+
+    <label>Enter Number:</label>
+    <input id='nbrEnter'/>
+    <button onclick='fact()'>Calculate Factorial</button>
+    <input id='answer'/>
+
+  </body>
+</head>
+
+</html>

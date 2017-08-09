@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head><title></title></head>
+  <style>
+    body {
+        text-align: center;
+    }
+  </style>
+  <body onload='ready'>
+    <p id='ptag'></p>
+      <script lang='javascript'>
+          function ready() {
+                var pCount = document.getElementById('ptag');
+                var done = false;
+                var arr =[];
+                var nbr = 1;
+                var count = 0;
+                while (!done) {
+                        if (nbr%11==0 || nbr%13==0) {
+                            count++;
+                            arr.push(nbr);
+                        }
+                        if(count == 20) {
+                            done = true;
+                        } else {
+                            nbr++;
+                        }
+                }
+                pCtrl.textContent = 'The number is ' + nbr + ' and the numbers are' + arr.join(' ');
+          }
+    </script>
+  </body>
+</html>

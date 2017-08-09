@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <body>
+      <script lang='javascript'>
+        function fact(){
+            var nbrCtrl = document.getElementById('nbr');
+            var ansCtrl = document.getElementById('ans');
+            var nbr = Number(nbrCtrl.value);
+
+              var sum = 0;
+              for (var idx = 0; idx <= nbr; idx++) {
+                sum += idx;
+                ansCtrl.value = sum;
+              }
+
+            }
+      </script>
+
+      <label>Enter Number:</label>
+      <input id='nbr' />
+      <button onclick='fact()'>Calculate Sum</button>
+      <input id='ans' />
+
+    </body>
+  </head>
+</html>
